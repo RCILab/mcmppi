@@ -3,68 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="Manifold-Constrained MPPI - Seulchan Lee, Sanghyun Kim">
+  <meta name="description" content="MC-MPPI: a real-time sampling-based control framework that strictly enforces manifold-based equality constraints by combining VAE latent-space planning with KKT projection.">
+  <meta name="keywords" content="MPPI, sampling-based MPC, model predictive control, equality constraints, constraint manifold, variational autoencoder, dual-arm manipulation, closed-chain manipulation, robotics">
+  <meta name="author" content="Seulchan Lee, Sanghyun Kim">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="RCI Lab, Kyung Hee University">
+  <meta property="og:title" content="Manifold-Constrained MPPI: Real-Time Sampling-Based Control Under Hard Constraints">
+  <meta property="og:description" content="MC-MPPI: a real-time sampling-based control framework that strictly enforces manifold-based equality constraints by combining VAE latent-space planning with KKT projection.">
+  <meta property="og:url" content="https://ggorygory.github.io/mcmppi/">
+  <meta property="og:image" content="https://ggorygory.github.io/mcmppi/static/images/teaser.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="Manifold-Constrained MPPI - Closed-Chain Dual-Arm Manipulation">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Seulchan Lee">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="MPPI">
+  <meta property="article:tag" content="Constrained Sampling">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Manifold-Constrained MPPI">
+  <meta name="twitter:description" content="MC-MPPI enforces hard manifold-based equality constraints in real time by combining VAE latent-space MPPI with a one-shot KKT projection.">
+  <meta name="twitter:image" content="https://ggorygory.github.io/mcmppi/static/images/teaser.jpg">
+  <meta name="twitter:image:alt" content="Manifold-Constrained MPPI">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <meta name="citation_title" content="Manifold-Constrained MPPI: Real-Time Sampling-Based Control Under Hard Constraints">
+  <meta name="citation_author" content="Lee, Seulchan">
+  <meta name="citation_author" content="Kim, Sanghyun">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="International Journal of Control, Automation, and Systems (IJCAS), submitted">
+  <meta name="citation_pdf_url" content="https://ggorygory.github.io/mcmppi/static/pdfs/MC_MPPI.pdf">
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,23 +57,22 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>Auto-Chem | RCILab at KHU</title>
-  
+  <title>MC-MPPI | RCI Lab at KHU</title>
+
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -97,10 +80,10 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -108,72 +91,70 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Manifold-Constrained MPPI: Real-Time Sampling-Based Control Under Hard Constraints",
+    "description": "MC-MPPI enforces hard manifold-based equality constraints in real time by combining VAE latent-space MPPI with a one-shot KKT projection.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
+        "name": "Seulchan Lee",
         "affiliation": {
           "@type": "Organization",
-          "name": "TUTION_NAME"
+          "name": "Kyung Hee University"
         }
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
+        "name": "Sanghyun Kim",
         "affiliation": {
           "@type": "Organization",
-          "name": "TUTION_NAME"
+          "name": "Kyung Hee University"
         }
       }
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2026-01-01",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "International Journal of Control, Automation, and Systems"
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "url": "https://ggorygory.github.io/mcmppi/",
+    "image": "https://ggorygory.github.io/mcmppi/static/images/teaser.jpg",
+    "keywords": ["MPPI", "sampling-based MPC", "equality constraints", "constraint manifold", "variational autoencoder", "dual-arm manipulation"],
+    "abstract": "Sampling-based model predictive control methods such as Model Predictive Path Integral (MPPI) offer derivative-free optimization and robustness in complex robotic systems, but cannot guarantee hard-constraint satisfaction. We propose Manifold-Constrained MPPI (MC-MPPI), a real-time framework that strictly enforces manifold-based equality constraints by decoupling constraint handling into VAE-based latent-space planning and a KKT-based execution-level projection.",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      "@id": "https://ggorygory.github.io/mcmppi/"
     },
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Sampling-based Model Predictive Control"
       },
       {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "@type": "Thing",
+        "name": "Constrained Manipulation"
       }
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "TUTION_OR_LAB_NAME",
-    "url": "https://YOUR_TUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "name": "Robot Control and Interaction Laboratory, Kyung Hee University",
+    "url": "https://www.rcilab.khu.ac.kr",
+    "logo": "https://ggorygory.github.io/mcmppi/static/images/favicon.ico",
     "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/ggorygory"
     ]
   }
   </script>
@@ -186,135 +167,61 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <!-- <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-              <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 1</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div> -->
-
   <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">LLM-Guided Tool-Aware Task and Motion Planning for Chemistry Lab Automation</h1>
+            <h1 class="title is-1 publication-title">Manifold-Constrained MPPI:<br>Real-Time Sampling-Based Control Under Hard Constraints</h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
               <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Bohyeong Pak<small><sup>*</sup></small></a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Hyunho Cho<small><sup>*</sup></small></a><sup>1</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Sanghyun Kim<small><sup>†</sup></small></a><sup>1</sup>,</span>
-                    </div>
+                  <a href="mailto:lee081847@khu.ac.kr" target="_blank">Seulchan Lee</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.rcilab.khu.ac.kr" target="_blank">Sanghyun Kim<small><sup>†</sup></small></a><sup>1,2</sup></span>
+              </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">
-                      <sup>1</sup>Kyung Hee University, 
-                      <br>Submitted to Applied Intelligence, 2026
-                    </span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb">
-                      <small><br><sup>*</sup>Indicates Equal Contribution, </small>
-                      <small><sup>†</sup>Corresponding Author</small>
-                    </span>
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <sup>1</sup>School of Mechanical Engineering, Kyung Hee University,
+                  <sup>2</sup>Advanced Institute of Convergence Technology (AICT)
+                  <br>Submitted to International Journal of Control, Automation, and Systems (IJCAS), 2026
+                </span>
+                <span class="eql-cntrb">
+                  <small><br><sup>†</sup>Corresponding Author</small>
+                </span>
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!-- TODO: Update with your arXiv paper ID -->
-                      <!-- <span class="link-block"> -->
-                        <!-- <a href="https://arxiv.org/pdf/&lt;ARXIV PAPER ID&gt;.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark"> -->
-                        <!-- <span class="icon"> -->
-                          <!-- <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
-                        <!-- </span> -->
-                        <!-- <span>Paper</span> -->
-                        <!-- </a> -->
-                      <!-- </span> -->
-
-                      <!-- TODO: Add your youtube link -->
-                      <!-- <span class="link-block"> -->
-                        <!-- <a href="https://www.youtube.com/" target="_blank" class="external-link button is-normal is-rounded is-dark"> -->
-                          <!-- <span class="icon"> -->
-                            <!-- <svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg><i class="fab fa-youtube"></i> Font Awesome fontawesome.com -->
-                          <!-- </span> -->
-                          <!-- <span>YouTube</span> -->
-                        <!-- </a> -->
-                      <!-- </span> -->
-
-                      <!-- TODO: Add your supplementary material PDF or remove this section -->
-                      <span class="link-block">
-                        <a href="static/pdfs/AUTO_CHEM.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                            <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
-                          </span>
-                          <span>Paper</span>
-                        </a>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- TODO: Replace with actual paper PDF when available -->
+                  <span class="link-block">
+                    <a href="static/pdfs/MC_MPPI.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
                       </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
 
-                      <!-- TODO: Replace with your GitHub repository URL -->
-                      <!-- <span class="link-block"> -->
-                        <!-- <a href="https://github.com/RCILab/RCI_auto_chem" target="_blank" class="external-link button is-normal is-rounded is-dark"> -->
-                          <!-- <span class="icon"> -->
-                            <!-- <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><i class="fab fa-github"></i> Font Awesome fontawesome.com -->
-                          <!-- </span> -->
-                          <!-- <span>Code</span> -->
-                        <!-- </a> -->
-                      <!-- </span> -->
+                  <!-- TODO: Replace with actual GitHub repo URL when available -->
+                  <span class="link-block">
+                    <a href="https://github.com/ggorygory/mcmppi" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
 
-                      <!-- TODO: Update with your arXiv paper ID -->
-                      <!-- <span class="link-block"> -->
-                        <!-- <a href="https://arxiv.org/abs/&lt;ARXIV PAPER ID&gt;" target="_blank" class="external-link button is-normal is-rounded is-dark"> -->
-                          <!-- <span class="icon"> -->
-                            <!-- <i class="ai ai-arxiv"></i> -->
-                          <!-- </span> -->
-                          <!-- <span>arXiv</span> -->
-                        <!-- </a> -->
-                      <!-- </span> -->
-                    </div>
-                  </div>
+                  <!-- TODO: Add arXiv link when available -->
+                  <!-- <span class="link-block">
+                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
+                      <span>arXiv</span>
+                    </a>
+                  </span> -->
                 </div>
               </div>
             </div>
@@ -322,26 +229,22 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" style="text-align: center;">
 
-      <!-- If you want to put a teaser video instead of image, remove below annotation of video block. -->
-      <!-- TODO: Replace with your teaser video -->
-      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata"> -->
-        <!-- TODO: Add your video file path here -->
-        <!-- <source src="static/video/video.mp4" type="video/mp4"> -->
-      <!-- </video> -->
-      
-      <img src="static/images/overview.png" alt="LLM-Guided Tool-Aware TAMP framework overview" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px;">
-      
-      <!-- TODO: Replace with your video description -->
+      <!-- TODO: Replace with a teaser video if available -->
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/teaser.mp4" type="video/mp4">
+      </video> -->
+
+      <img src="static/images/teaser.jpg" alt="Closed-chain dual-arm manipulation under manifold-based equality constraints" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px;">
+
       <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; font-size: 0.95rem; line-height: 1.5;">
         <p class="section-intro" style="margin-bottom: 0; color: #4a4a4a;">
-          LLM-Guided Tool-Aware TAMP framework integrates symbolic reasoning with physical execution for fully autonomous chemistry laboratory automation. The system combines an LLM Module for protocol validation and context-aware tool reasoning, a GPU-accelerated TAMP Module for collision-free trajectory generation, a multi-modal Perception Module for real-time world-state grounding, and a Skill Library for sensor-feedback-based execution enabling robust end-to-end automation of complex chemical procedures from natural language XDL protocols.
+          MC-MPPI is a real-time sampling-based control framework that strictly enforces manifold-based equality constraints, such as the closed-chain kinematic constraints arising in dual-arm manipulation. By decoupling constraint handling into a VAE-learned latent-space planning stage and a KKT-based execution-level projection, MC-MPPI runs at 100&nbsp;Hz while reducing equality-constraint violation by an order of magnitude over baseline MPPI variants.
         </p>
       </h2>
     </div>
@@ -357,7 +260,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Autonomous chemistry laboratories can accelerate material discovery and improve experimental reproducibility, yet current systems remain limited in two respects: existing automation pipelines rely on protocol-specific equipment that restricts adaptability to diverse, non-linear workflows, and task and motion planning on robots with limited kinematic redundancy becomes unreliable when strict orientation, collision, and workspace constraints must be satisfied at once. This paper proposes LLM-Guided Tool-Aware TAMP (Task and Motion Planning), a hierarchical framework that combines large language model (LLM)-based symbolic reasoning with GPU-accelerated motion optimization for chemistry automation. The system converts natural-language experimental instructions into validated Chemical Description Language (XDL) protocols, selects appropriate end-effectors and plans obstacle rearrangement based on execution context, estimates the scene state through multi-view fiducial marker-based perception, and produces collision-free, constraint-satisfying trajectories by evaluating thousands of candidates in parallel. A sensor-driven skill library handles execution-level actions such as tool changing and adaptive pouring. On a 6-DoF manipulator, the GPU-parallelized planner achieves a 96.7% planning success rate under orientation constraints, up from 63.3% with a CPU-based sampling baseline, with lower planning-time variance. We build a high-fidelity simulation testbed in NVIDIA Isaac Sim for randomized trials and module-level ablation studies, and results confirm that the full framework executes complete chemical sequences involving tool switching, obstacle rearrangement, and multi-step reagent manipulation.
+            Sampling-based model predictive control methods such as Model Predictive Path Integral (MPPI) offer derivative-free optimization and robustness in complex robotic systems, making them attractive for real-time control. However, standard MPPI relies on cost-based soft penalties that cannot guarantee hard-constraint satisfaction, severely limiting its applicability to constrained tasks such as closed-chain manipulation. To address this, we propose <strong>Manifold-Constrained MPPI (MC-MPPI)</strong>, a real-time sampling-based control framework that handles hard equality constraints while preserving the computational advantages of MPPI. The key idea is to decouple constraint handling into two stages: planning and execution. At the planning level, a Variational Autoencoder (VAE) learns a low-dimensional latent space that captures the structure of the constraint manifold, enabling MPPI to sample candidate trajectories in this latent space and evaluate costs through decoding, without per-sample projection onto the manifold. At the execution level, a KKT-based projection layer enforces constraint satisfaction on the selected trajectory, which is then tracked by an inverse dynamics controller. This decoupled architecture significantly reduces the computational burden of enforcing hard constraints, enabling real-time control of high-dimensional constrained systems. Experiments on multiple constrained robotic systems in both simulation and real-world settings, including closed-chain dual-arm manipulation, demonstrate that MC-MPPI operates at 100&nbsp;Hz while maintaining constraint satisfaction in real time and significantly outperforming baseline methods in tracking accuracy.
           </p>
         </div>
       </div>
@@ -374,36 +277,35 @@
 
     <div style="text-align: center; margin-bottom: 1rem;">
       <p class="fig-caption" style="font-size: 1rem; line-height: 1.6;">
-        <strong>System Overview.</strong>
-        Upper: Multi-Layer Failure Resolution Hierarchy.
-        LLM Module resolves semantic failures via XDL generation (left),
-        Perception Module resolves state-grounding failures via 6-DoF localization (center), and TAMP Module resolves planning-reliability failures via GPU-parallelized optimization (right).
-        Lower: Execution-Level Failure Resolution. Skill Library Module converts nominal trajectories into sensor-feedback-driven motion primitives, resolving physical uncertainties and ensuring stable contact-rich task execution.
+        <strong>Two-Stage Architecture.</strong>
+        The upper-level planner runs MPPI in a VAE-learned latent space to efficiently generate near-feasible candidate trajectories under manifold-based equality constraints. The decoded optimal solution is then corrected by a KKT-based projection layer to recover strict feasibility, and the resulting reference is tracked by a lower-level HQP-based inverse-dynamics controller.
+      </p>
+    </div>
+
+    <!-- TODO: Replace overview.png with the MC-MPPI architecture diagram (e.g., figure/fig3 from the IJCAS paper) -->
+    <div style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+      <img src="static/images/teaser.jpg" alt="MC-MPPI overall architecture" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px; opacity: 0.95;">
+      <p class="fig-caption" style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6; color: #4a4a4a;">
+        Real-world closed-chain dual-arm setup considered in this work. The shared object induces hard kinematic equality constraints between the two manipulators.
       </p>
     </div>
 
     <div class="columns is-multiline" style="margin-top: 1.5rem;">
-  
+
       <div class="column is-full">
         <div class="method-card is-horizontal">
-          
           <div class="card-content">
-            <div class="card-tag">LLM Module</div>
-            <h4>Context-Aware Protocol Generation & Action Reasoning</h4>
-          </div>
-          <div class="card-image">
-            <img src="static/images/llm.png" alt="LLM Module Architecture">
-            <img src="static/images/llm_xdl.png" alt="LLM Module Architecture">
+            <div class="card-tag">Problem Setup</div>
+            <h4>Constraint Manifold and Why Standard MPPI Fails</h4>
           </div>
           <div>
             <p>
-              The LLM Module serves as the high-level reasoning backbone, comprising two components:
-              the XDL Generator, which parses natural-language chemical protocols
-              into machine-readable XDL procedure sequences, and the Action Reasoner,
-              which determines the appropriate end-effector, whether obstacle rearrangement is needed,
-              and the target grid for relocated objects. Joint reasoning over current and subsequent
-              procedures enables context-aware rearrangement and semantic tool assignment
-              grounded in object affordances, reducing manual domain redefinition even for novel vessel types.
+              We consider an <em>n</em>-DoF system whose configuration <em>q</em> is restricted to the
+              equality-constraint manifold <em>M</em> = {<em>q</em> : <em>h</em>(<em>q</em>) = 0},
+              an (<em>n</em>&minus;<em>l</em>)-dimensional submanifold of zero Lebesgue measure.
+              Naive MPPI sampling in the ambient space therefore yields feasible configurations with probability zero,
+              and the conventional remedy &mdash; adding a large penalty cost on &Vert;<em>h</em>(<em>q</em>)&Vert; &mdash;
+              cannot strictly enforce the constraint and quickly destabilizes closed-chain tasks.
             </p>
           </div>
         </div>
@@ -412,21 +314,22 @@
       <div class="column is-full">
         <div class="method-card is-horizontal">
           <div class="card-content">
-            <div class="card-tag">Perception Module</div>
-            <h4>Real-Time World-State Grounding</h4>
-          </div>
-          <div class="card-image">
-            <img src="static/images/perception.png" alt="Perception Module Real-Time Tracking">
+            <div class="card-tag">Planning Stage</div>
+            <h4>VAE-Based Latent-Space MPPI</h4>
           </div>
           <div>
             <p>
-              The Perception Module provides real-time 6-DoF pose estimates of all laboratory assets
-              using AprilTag markers and two calibrated RGB cameras. Per-object poses are computed
-              in the robot base frame and fused via inverse-distance weighting — with SLERP for
-              orientation — to maximize robustness against occlusions, then broadcast over the ROS 2
-              TF tree at 30 Hz. The module also aggregates and filters scale and temperature sensor
-              streams, providing clean feedback signals for closed-loop skills such as adaptive pouring
-              and temperature regulation.
+              A Variational Autoencoder is pre-trained on feasible configurations on <em>M</em>, and the resulting
+              decoder &psi;<sub>&theta;</sub> : &#8477;<sup>m</sup> &rarr; &#8477;<sup>n</sup>
+              acts as a learned, near-feasible parameterization of the constraint manifold.
+              MC-MPPI runs MPPI <em>directly in this latent space</em>: it propagates a latent state with
+              <em>z</em><sub>t+1</sub> = <em>z</em><sub>t</sub> + &#x0169;<sub>t</sub>&Delta;t,
+              decodes each rolled-out latent trajectory back to the joint space via &psi;<sub>&theta;</sub>,
+              and evaluates costs there.
+              A <em>single-instance</em> sampling strategy &mdash; using one trajectory-wise noise vector applied
+              uniformly over the prediction horizon &mdash; suppresses chattering of decoded motions and yields
+              broader exploration per rollout. Thousands of latent rollouts are evaluated in parallel on the GPU,
+              and the importance-weighted optimum is decoded into a near-feasible reference configuration.
             </p>
           </div>
         </div>
@@ -435,41 +338,19 @@
       <div class="column is-full">
         <div class="method-card is-horizontal">
           <div class="card-content">
-            <div class="card-tag">TAMP Module</div>
-            <h4>Batched Joint Differentiable Optimization with Chemistry-Specific Operators</h4>
-          </div>
-          <div class="card-image">
-            <img src="static/images/tamp.png" alt="TAMP Module Trajectory Planning">
+            <div class="card-tag">Execution Stage</div>
+            <h4>One-Shot KKT/QP Projection &amp; HQP Tracking</h4>
           </div>
           <div>
             <p>
-              The TAMP Module adopts cuTAMP as its planning solver, jointly optimizing
-              all constraints across thousands of batched candidate particles via gradient-based updates,
-              with structurally bounded runtime that ensures time-sensitive reaction conditions are never
-              disrupted. Four chemistry-specific operators are introduced: SidePick for
-              full-circumference grasping of cylindrical vessels, MoveHolding for
-              upright-constrained liquid transport, Pour for decoupled geometric pouring
-              trajectories, and Stir for device-level stirrer control delegated entirely
-              to the execution layer.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-full">
-        <div class="method-card is-horizontal">
-          <div class="card-content">
-            <div class="card-tag">Skill Library Module</div>
-            <h4>Sensor-Feedback-Based Motion Primitives</h4>
-          </div>
-          <div>
-            <p>
-              The Skill Library Module instantiates nominal TAMP trajectories into sensor-feedback-driven
-              motion primitives. Adaptive Pouring dynamically adjusts wrist angular
-              velocity via PD control using real-time scale feedback. Automatic Tool Changing
-              executes electromagnet control and mechanical latching upon reaching the tool rack.
-              Feedback-Based Device Control monitors temperature and RPM streams,
-              suspending execution until target physical conditions are confirmed at the execution layer.
+              Because &psi;<sub>&theta;</sub> is only an approximation of <em>M</em>, the decoded reference exhibits a
+              residual <em>manifold mismatch</em>. A single-step QP, obtained by linearizing
+              <em>h</em>(<em>q</em>) = 0, projects this reference back onto the manifold while a task-tracking term
+              keeps the projection biased toward the operational-space target. Because the reference is already
+              near-feasible, one QP solve recovers a strictly feasible configuration without iterative refinement,
+              keeping the projection cost negligible. The resulting feasible state is tracked by a Hierarchical
+              Quadratic Programming (HQP)-based inverse-dynamics controller that produces control inputs consistent
+              with the equality constraints of the closed-chain system.
             </p>
           </div>
         </div>
@@ -486,51 +367,63 @@
       <div class="column"><h2 class="title is-3">Experiments</h2></div>
     </div>
 
-    <div class="card-image">
-      <img src="static/images/experiment.png" alt="Experiment">
+    <p style="margin-bottom: 1.5rem;">
+      We validate MC-MPPI on a closed-chain dual-arm manipulation task in MuJoCo with two
+      Panda manipulators jointly grasping a flat tray
+      (<em>q</em> &isin; &#8477;<sup>14</sup>, equality constraint <em>h</em>(<em>q</em>) &isin; &#8477;<sup>8</sup>
+      comprising a 6-D relative-pose closure and a 2-D tray-flatness term, latent dimension <em>m</em>&nbsp;=&nbsp;6).
+      MPPI uses <em>K</em>&nbsp;=&nbsp;200 samples, horizon <em>T</em>&nbsp;=&nbsp;30, and
+      &Delta;<em>t</em>&nbsp;=&nbsp;10&nbsp;ms on an Intel i5-13400F CPU with an NVIDIA RTX 4060 Ti GPU.
+    </p>
+
+    <!-- TODO: Replace experiment.png with paper figures (e.g., figure/exp1_snapshots_success, figure/exp1_violation) -->
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <img src="static/images/teaser.jpg" alt="Experiment overview" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px; opacity: 0.95;">
       <p class="fig-caption" style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6; color: #4a4a4a;">
-        Sequential execution snapshots of the Move → Transfer → Stir 
-        workflow. Each row shows five representative keyframes from a single trial. 
-        (a) Move: the robot relocates the container to the target zone. 
-        (b) Transfer: liquid reagent is poured into the destination vessel. 
-        (c) Stir: the mixture is stirred on the hotplate to complete the reaction sequence.
+        Closed-chain dual-arm manipulation benchmark used throughout the experiments.
       </p>
     </div>
 
-    <!-- XDL Generation -->
-    <div class="columns is-centered" style="margin-top: 3rem;">
+    <!-- Hard-Constraint Satisfaction -->
+    <div class="columns is-centered" style="margin-top: 2.5rem;">
       <div class="column is-full">
-        <h3 class="title is-4">XDL Generation & Validation</h3>
+        <h3 class="title is-4">Validation of Hard-Constraint Satisfaction</h3>
         <p>
-          The XDL Generator achieves a 97% success rate on 100 test instructions,
-          with zero syntax or semantic errors. The XDL Validator records 100% classification
-          accuracy across all injected error categories with zero false positives and negatives.
+          MC-MPPI is compared against <em>Vanilla MPPI</em> (joint-space MPPI with a penalty cost on
+          &Vert;<em>h</em>(<em>q</em>)&Vert;) and <em>Latent MPPI</em> (latent-space MPPI without QP projection).
+          MC-MPPI reduces the closed-chain violation by nearly an order of magnitude over both baselines,
+          and is the only variant that successfully transports the tray to the target without losing the
+          bimanual grasp.
         </p>
 
         <div class="table-container" style="margin-top: 1.5rem;">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
             <thead>
               <tr>
-                <th>Metric</th>
-                <th>Result (%)</th>
+                <th>Method</th>
+                <th>&Vert;<em>h</em>(<em>q</em>)&Vert; (8D)</th>
+                <th>&Vert;<em>h</em><sub>cc</sub>&Vert; (6D)</th>
+                <th>&Vert;<em>h</em><sub>flat</sub>&Vert; (2D)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Total Trials</td>
-                <td>100</td>
+                <td>Vanilla MPPI</td>
+                <td>0.0305 &plusmn; 0.0229</td>
+                <td>0.0154 &plusmn; 0.0110</td>
+                <td>0.0263 &plusmn; 0.0202</td>
               </tr>
               <tr>
-                <td>Valid</td>
-                <td>97</td>
+                <td>Latent MPPI</td>
+                <td>0.0199 &plusmn; 0.0022</td>
+                <td>0.0181 &plusmn; 0.0023</td>
+                <td>0.0079 &plusmn; 0.0027</td>
               </tr>
               <tr>
-                <td>Invalid</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Success Rate</td>
-                <td>97</td>
+                <td><strong>MC-MPPI (Ours)</strong></td>
+                <td><strong>0.0066 &plusmn; 0.0007</strong></td>
+                <td><strong>0.0024 &plusmn; 0.0004</strong></td>
+                <td><strong>0.0061 &plusmn; 0.0006</strong></td>
               </tr>
             </tbody>
           </table>
@@ -538,67 +431,44 @@
       </div>
     </div>
 
-    <!-- TAMP Planning -->
+    <!-- Single-Instance Sampling -->
     <div class="columns is-centered" style="margin-top: 3rem;">
       <div class="column is-full">
-        <h3 class="title is-4">TAMP Planning Reliability</h3>
+        <h3 class="title is-4">Validation of Single-Instance Sampling</h3>
         <p>
-          cuTAMP achieves 100% planning success across all three tasks, compared to
-          60–83% for PDDLStream, with the most pronounced gap on Transfer where orientation constraints
-          are most restrictive. Unlike PDDLStream, cuTAMP maintains structurally bounded runtime with
-          low variance, a critical property for time-sensitive chemical workflows.
+          With single-instance sampling, MC-MPPI converges around static obstacles in
+          <strong>7.74&nbsp;s</strong>, compared to <strong>79.4&nbsp;s</strong> for the conventional
+          step-wise variant, while producing notably smoother joint trajectories. The mean computation
+          time per cycle stays well within the 10&nbsp;ms budget; without single-instance sampling, peak
+          latency reaches 16.38&nbsp;ms with a 0.63% deadline-miss rate, whereas the proposed scheme keeps
+          all cycles below the budget.
         </p>
 
         <div class="table-container" style="margin-top: 1.5rem;">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
             <thead>
               <tr>
-                <th style="vertical-align: middle;">Task</th>
-                <th style="vertical-align: middle;">Solver</th>
-                <th style="vertical-align: middle;">Success (%)</th>
-                <th style="vertical-align: middle;">Planning Time (s)</th>
-                <th style="vertical-align: middle;">Timeout (%)</th>
+                <th>Variant</th>
+                <th>Mean (ms)</th>
+                <th>Std (ms)</th>
+                <th>Max (ms)</th>
+                <th>&ge; 10&nbsp;ms (%)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td rowspan="2">Transfer</td>
-                <td>PDDLStream</td>
-                <td>66.7</td>
-                <td>7.21 ± 10.26</td>
-                <td>10.0</td>
+                <td><strong>w. single-instance (Ours)</strong></td>
+                <td><strong>7.17</strong></td>
+                <td><strong>0.94</strong></td>
+                <td><strong>9.49</strong></td>
+                <td><strong>0.00</strong></td>
               </tr>
               <tr>
-                <td><strong>cuTAMP (Ours)</strong></td>
-                <td><strong>100.0</strong></td>
-                <td><strong>31.18 ± 1.44</strong></td>
-                <td><strong>0.0</strong></td>
-              </tr>
-              <tr>
-                <td rowspan="2">Move</td>
-                <td>PDDLStream</td>
-                <td>83.3</td>
-                <td>0.17 ± 0.12</td>
-                <td>0.0</td>
-              </tr>
-              <tr>
-                <td><strong>cuTAMP (Ours)</strong></td>
-                <td><strong>100.0</strong></td>
-                <td><strong>17.60 ± 3.55</strong></td>
-                <td><strong>0.0</strong></td>
-              </tr>
-              <tr>
-                <td rowspan="2">Stir</td>
-                <td>PDDLStream</td>
-                <td>60.0</td>
-                <td>0.79 ± 0.70</td>
-                <td>23.3</td>
-              </tr>
-              <tr>
-                <td><strong>cuTAMP (Ours)</strong></td>
-                <td><strong>100.0</strong></td>
-                <td><strong>28.83 ± 1.00</strong></td>
-                <td><strong>0.0</strong></td>
+                <td>w/o single-instance</td>
+                <td>7.23</td>
+                <td>1.04</td>
+                <td>16.38</td>
+                <td>0.63</td>
               </tr>
             </tbody>
           </table>
@@ -606,516 +476,105 @@
       </div>
     </div>
 
-    <!-- Tool Selection & Rearrangement -->
+    <!-- Dynamic Obstacles -->
     <div class="columns is-centered" style="margin-top: 3rem;">
       <div class="column is-full">
-        <h3 class="title is-4">LLM-Based Tool Selection & Context-Aware Rearrangement</h3>
+        <h3 class="title is-4">Reactiveness Under Dynamic Obstacles</h3>
         <p>
-          The Action Reasoner achieves 100% accuracy on tool selection, rearrangement
-          necessity, and auxiliary tool inference. Context-aware rearrangement reaches
-          96.67% sequence completion on Transfer → Stir, versus 50.0% for random
-          and 0% for no rearrangement, confirming that procedural context is decisive for multi-step execution.
+          Under a single spherical obstacle (radius 5&nbsp;cm) traversing the workspace at 0.1&ndash;0.2&nbsp;m/s
+          along either the <em>x</em>- or <em>y</em>-axis, MC-MPPI achieves a 100% success rate in three of
+          four conditions while keeping the equality-constraint violation in the 0.0062&ndash;0.0070 range,
+          comparable to the static-obstacle case. The only failure mode arises in the
+          <em>x</em>-axis 0.2&nbsp;m/s setting, where the dual-arm workspace itself bounds the available
+          lateral clearance.
         </p>
 
         <div class="table-container" style="margin-top: 1.5rem;">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
             <thead>
               <tr>
-                <th style="vertical-align: middle;">Sequence</th>
-                <th style="vertical-align: middle;">Metric</th>
-                <th style="vertical-align: middle;">No Rearrange</th>
-                <th style="vertical-align: middle;">Random Rearrange</th>
-                <th style="vertical-align: middle;">Context-Aware (Ours)</th>
+                <th>Obstacle Motion</th>
+                <th>Speed (m/s)</th>
+                <th>Success Rate</th>
+                <th>&Vert;<em>h</em>(<em>q</em>)&Vert;</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td rowspan="2">Transfer → Stir</td>
-                <td>Step 1 Success</td>
-                <td>0%</td>
-                <td>60.0%</td>
-                <td><strong>96.67%</strong></td>
+                <td><em>x</em>-axis</td>
+                <td>0.1</td>
+                <td><strong>100%</strong></td>
+                <td>0.0070 &plusmn; 0.0007</td>
               </tr>
               <tr>
-                <td>Sequence Completion</td>
-                <td>0%</td>
-                <td>50.0%</td>
-                <td><strong>96.67%</strong></td>
+                <td><em>x</em>-axis</td>
+                <td>0.2</td>
+                <td>80%</td>
+                <td>0.0062 &plusmn; 0.0010</td>
               </tr>
               <tr>
-                <td rowspan="2">Stir → Transfer</td>
-                <td>Step 1 Success</td>
-                <td>100.0%</td>
-                <td>100.0%</td>
-                <td><strong>100.0%</strong></td>
+                <td><em>y</em>-axis</td>
+                <td>0.1</td>
+                <td><strong>100%</strong></td>
+                <td>0.0065 &plusmn; 0.0008</td>
               </tr>
               <tr>
-                <td>Sequence Completion</td>
-                <td>13.33%</td>
-                <td>40.0%</td>
-                <td><strong>83.33%</strong></td>
+                <td><em>y</em>-axis</td>
+                <td>0.2</td>
+                <td><strong>100%</strong></td>
+                <td>0.0067 &plusmn; 0.0009</td>
               </tr>
             </tbody>
           </table>
         </div>
-
-        <!-- Randomized Trial Videos -->
-        <div style="margin-top: 2.5rem;">
-          <!-- Row 1 Label -->
-          <p style="font-weight: 600; color: #555; margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
-            Transfer
-          </p>
-
-          <!-- Row 1: 5 videos -->
-          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 8px;">
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/transfer/1.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/transfer/2.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/transfer/3.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/transfer/4.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/transfer/5.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <!-- Row 2 Label -->
-          <p style="font-weight: 600; color: #555; margin-bottom: 0.5rem; margin-top: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
-            Stir
-          </p>
-
-          <!-- Row 2: 5 videos -->
-          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;">
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/stir/1.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/stir/2.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/stir/3.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/stir/4.mp4" type="video/mp4">
-            </video>
-            <video autoplay muted loop playsinline style="width:100%; border-radius:6px; aspect-ratio:16/9; object-fit:cover;">
-              <source src="static/videos/random/stir/5.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        
       </div>
     </div>
 
-    <!-- End-to-End -->
+    <!-- Real-World Deployment -->
     <div class="columns is-centered" style="margin-top: 3rem;">
       <div class="column is-full">
-        <h3 class="title is-4">End-to-End System Evaluation</h3>
-
+        <h3 class="title is-4">Real-World Deployment</h3>
         <p>
-          Evaluated over 30 trials per workflow from a single natural language command, the integrated
-          system achieves an overall end-to-end success rate of 97.78%, with XDL
-          generation succeeding in 100% of all trials.
+          The framework is deployed on a real closed-chain dual-arm system to verify practical
+          applicability under sim-to-real uncertainties such as sensor noise, model mismatch, and
+          unmodeled dynamics. The full hardware experiments and additional ablations are reported in the
+          accompanying IJCAS submission.
         </p>
 
-        <div class="table-container" style="margin-top: 1.5rem;">
-          <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
-            <thead>
-              <tr>
-                <th>Workflow</th>
-                <th>XDL Gen. (%)</th>
-                <th>Planning (%)</th>
-                <th>Execution (%)</th>
-                <th>End-to-End (%)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Move → Transfer</td>
-                <td>100.0</td>
-                <td>100.0</td>
-                <td>100.0</td>
-                <td><strong>100.0</strong></td>
-              </tr>
-              <tr>
-                <td>Transfer → Stir → Move</td>
-                <td>100.0</td>
-                <td>96.67</td>
-                <td>96.67</td>
-                <td><strong>96.67</strong></td>
-              </tr>
-              <tr>
-                <td>Move → Transfer → Stir</td>
-                <td>100.0</td>
-                <td>96.67</td>
-                <td>96.67</td>
-                <td><strong>96.67</strong></td>
-              </tr>
-              <tr style="background-color: #f5f5f5;">
-                <td><strong>Overall Average</strong></td>
-                <td><strong>100.0</strong></td>
-                <td><strong>97.78</strong></td>
-                <td><strong>97.78</strong></td>
-                <td><strong>97.78</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <video controls muted loop autoplay style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
-          <source src="static/videos/end_to_end_x2.mp4" type="video/mp4">
-        </video>
+        <!-- TODO: Replace placeholder with the real-world experiment video when available -->
+        <!-- <video controls muted loop autoplay style="width: 100%; border-radius: 8px; margin-top: 1.5rem;">
+          <source src="static/videos/real_world.mp4" type="video/mp4">
+        </video> -->
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column"><h2 class="title is-3">Appendix</h2></div>
-    </div>
 
-    <!-- LLM Hyperparameters -->
-    <div class="columns is-centered" style="margin-top: 3rem;">
-      <div class="column is-full">
-        <h3 class="title is-4">Hyperparameters of LLM Module</h3>
-        <p>
-          Both LLM components are fine-tuned from a 4-bit quantized Llama 3.2 1B base model
-          via LoRA-based supervised fine-tuning. Configurations differ between the two components
-          based on their respective task structures.
-        </p>
-
-        <div class="table-container" style="margin-top: 1.5rem;">
-          <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
-            <thead>
-              <tr>
-                <th style="vertical-align: middle;">Parameter</th>
-                <th style="vertical-align: middle;">XDL Generator</th>
-                <th style="vertical-align: middle;">Action Reasoner</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="vertical-align: middle;">Base Model</td>
-                <td style="vertical-align: middle;" colspan="2">Llama 3.2 1B (4-bit quantized)</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Fine-tuning Method</td>
-                <td style="vertical-align: middle;" colspan="2">LoRA-based SFT</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">LoRA Rank (r)</td>
-                <td style="vertical-align: middle;">16</td>
-                <td style="vertical-align: middle;">8</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">LoRA Alpha (α)</td>
-                <td style="vertical-align: middle;">32</td>
-                <td style="vertical-align: middle;">16</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Dropout</td>
-                <td style="vertical-align: middle;">0.05</td>
-                <td style="vertical-align: middle;">0.05</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Optimizer</td>
-                <td style="vertical-align: middle;" colspan="2">AdamW (8-bit)</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Learning Rate</td>
-                <td style="vertical-align: middle;">2 × 10⁻⁴</td>
-                <td style="vertical-align: middle;">1 × 10⁻⁴</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Batch Size</td>
-                <td style="vertical-align: middle;" colspan="2">16</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Epochs</td>
-                <td style="vertical-align: middle;">5</td>
-                <td style="vertical-align: middle;">3</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Training Dataset Size</td>
-                <td style="vertical-align: middle;">5,000</td>
-                <td style="vertical-align: middle;">3,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dataset Details -->
-    <div class="columns is-centered" style="margin-top: 3rem;">
-      <div class="column is-full">
-        <h3 class="title is-4">Training Dataset Details</h3>
-        <p>
-          The XDL Generator dataset covers 5,000 samples across four combinatorial axes:
-          synonym variations for six core XDL operators (Add, Stir, HeatChill, Transfer, CleanVessel, Move),
-          continuous numerical parameter ranges (0–20 mL, 0–20°C, 1–30 s),
-          16 unique object identifiers, and command complexity distributed as
-          30% single-step, 40% two-step, and 30% three-step procedures.
-          The Action Reasoner dataset consists of 3,000 samples generated by placing
-          up to four objects on 12 workspace grids, balanced across
-          rearrangement-required and rearrangement-unnecessary cases to prevent over-prediction.
-        </p>
-      </div>
-    </div>
-
-    <!-- TAMP Configuration -->
-    <div class="columns is-centered" style="margin-top: 3rem;">
-      <div class="column is-full">
-        <h3 class="title is-4">TAMP Module Configuration</h3>
-
-        <div class="table-container" style="margin-top: 1.5rem;">
-          <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
-            <thead>
-              <tr>
-                <th style="vertical-align: middle;">Parameter</th>
-                <th style="vertical-align: middle;">Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="vertical-align: middle;">Parallel Particles</td>
-                <td style="vertical-align: middle;">1,024</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Optimization Steps</td>
-                <td style="vertical-align: middle;">1,000</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Planning Timeout</td>
-                <td style="vertical-align: middle;">60 s</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Max Retries</td>
-                <td style="vertical-align: middle;">3</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Max Allowable Tilt (θ<sub>max</sub>)</td>
-                <td style="vertical-align: middle;">5°</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: middle;">Workspace Grids</td>
-                <td style="vertical-align: middle;">12 (G1–G12)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- Datasets -->
-    <div class="columns is-centered" style="margin-top: 3rem;">
-      <div class="column is-full">
-        <!-- LLM Prompts -->
-        <div class="columns is-centered" style="margin-top: 3rem;">
-          <div class="column is-full">
-            <h3 class="title is-4">LLM Module Prompts & In-Context Examples</h3>
-            <p style="margin-bottom: 1.5rem;">
-              Both fine-tuned components share a structured prompt format. The system prompt
-              defines the task constraints, and in-context examples condition the model's output
-              format before the actual user query is provided.
-            </p>
-
-            <!-- Tab UI -->
-            <div class="llm-tabs">
-              <div style="display: flex; gap: 0; border-bottom: 2px solid #dbdbdb; margin-bottom: 0;">
-                <button class="llm-tab-btn active" onclick="switchLLMTab(event, 'tab-action')"
-                  style="padding: 0.6rem 1.4rem; border: none; border-bottom: 3px solid #2563eb; background: none; font-weight: 600; color: #2563eb; cursor: pointer; font-size: 0.9rem; margin-bottom: -2px;">
-                  Action Reasoner
-                </button>
-                <button class="llm-tab-btn" onclick="switchLLMTab(event, 'tab-xdl')"
-                  style="padding: 0.6rem 1.4rem; border: none; border-bottom: 3px solid transparent; background: none; font-weight: 600; color: #888; cursor: pointer; font-size: 0.9rem; margin-bottom: -2px;">
-                  XDL Generator
-                </button>
-              </div>
-
-              <!-- Action Reasoner Tab -->
-              <div id="tab-action" class="llm-tab-content" style="display: block; margin-top: 1.5rem;">
-                <p style="margin-bottom: 1rem; font-size: 0.92rem; color: #4a4a4a;">
-                  Receives the current/next XDL step, obstacle status, and candidate grids,
-                  then outputs four tokens: <code>main_tool</code>, <code>need_rearrange</code>,
-                  <code>aux_tool</code>, and <code>target_grid</code>.
-                  Fine-tuned from Llama 3.2 1B with three in-context example types.
-                </p>
-
-                <!-- System Prompt -->
-                <div class="prompt-block" style="margin-bottom: 1.2rem;">
-                  <div class="prompt-role system-role">SYSTEM</div>
-                  <pre class="prompt-pre"><code>You are a tool and rearrangement planner for laboratory automation.
-Tool Rules:
-  • dh3  (3-finger)  : Move, Stir for cylindrical vessels
-  • ag95 (2-finger)  : All Transfer operations
-  • vgc10 (suction)  : Objects exceeding gripper span
-
-Given the current and next XDL steps, the obstacle status, and candidate
-grids, output exactly four tokens separated by commas:
-
-  main_tool, need_rearrange, aux_tool, target_grid
-
-Allowed values:
-  • main_tool      : dh3 | ag95 | vgc10
-  • aux_tool       : dh3 | ag95 | vgc10 | None
-  • need_rearrange : True | False
-  • target_grid    : grid ID (e.g., G5) | None</code></pre>
-                </div>
-
-                <!-- Example 1 -->
-                <p style="font-weight: 600; font-size: 0.85rem; color: #555; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                  Example 1 — No Rearrangement
-                </p>
-                <div class="prompt-block" style="margin-bottom: 0.5rem;">
-                  <div class="prompt-role user-role">USER</div>
-                  <pre class="prompt-pre"><code>Current XDL : &lt;Add vessel="beaker_C" reagent="water" volume="11 mL" /&gt;
-Next XDL    : &lt;Transfer from_vessel="beaker_A" to_vessel="beaker_B" volume="11 mL" /&gt;
-Obstacle    : beaker at G5
-Candidate Grids:
-  • plate zone     : [G1]
-  • workspace edge : [G7, G8, G12]
-  • open area      : [G2, G4, G6, G10]</code></pre>
-                </div>
-                <div class="prompt-block" style="margin-bottom: 1.2rem;">
-                  <div class="prompt-role assistant-role">ASSISTANT</div>
-                  <pre class="prompt-pre"><code>dh3, False, None, None</code></pre>
-                </div>
-
-                <!-- Example 2 -->
-                <p style="font-weight: 600; font-size: 0.85rem; color: #555; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                  Example 2 — Rearrangement (Context-Aware): obstacle is the target of the next step → moved to task-relevant zone
-                </p>
-                <div class="prompt-block" style="margin-bottom: 0.5rem;">
-                  <div class="prompt-role user-role">USER</div>
-                  <pre class="prompt-pre"><code>Current XDL : &lt;CleanVessel vessel="flask_B" /&gt;
-Next XDL    : &lt;Stir vessel="flask_A" time="16 s" /&gt;
-Obstacle    : flask_A at G4 (blocking)
-Candidate Grids:
-  • stirrer zone   : [G2]
-  • plate zone     : [G1]
-  • workspace edge : [G7, G8, G12]
-  • open area      : [G3, G4, G5, G6, G10, G11]</code></pre>
-                </div>
-                <div class="prompt-block" style="margin-bottom: 1.2rem;">
-                  <div class="prompt-role assistant-role">ASSISTANT</div>
-                  <pre class="prompt-pre"><code>dh3, True, dh3, G2</code></pre>
-                </div>
-
-                <!-- Example 3 -->
-                <p style="font-weight: 600; font-size: 0.85rem; color: #555; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                  Example 3 — Rearrangement (Irrelevant): obstacle is unrelated to the next step → moved to workspace edge
-                </p>
-                <div class="prompt-block" style="margin-bottom: 0.5rem;">
-                  <div class="prompt-role user-role">USER</div>
-                  <pre class="prompt-pre"><code>Current XDL : &lt;CleanVessel vessel="beaker_A" /&gt;
-Next XDL    : &lt;Move object="box_A" place="plate_A" /&gt;
-Obstacle    : bottle_A at G11 (blocking)
-Candidate Grids:
-  • plate zone     : [G1]
-  • workspace edge : [G12]
-  • open area      : [G2, G3, G4, G5, G6, G9, G10, G11]</code></pre>
-                </div>
-                <div class="prompt-block">
-                  <div class="prompt-role assistant-role">ASSISTANT</div>
-                  <pre class="prompt-pre"><code>dh3, True, vgc10, G12</code></pre>
-                </div>
-              </div>
-
-              <!-- XDL Generator Tab -->
-              <div id="tab-xdl" class="llm-tab-content" style="display: none; margin-top: 1.5rem;">
-                <p style="margin-bottom: 1rem; font-size: 0.92rem; color: #4a4a4a;">
-                  Converts a natural language laboratory instruction into a structured XDL protocol
-                  enclosed in <code>&lt;procedure&gt;</code> tags. Trained on synonym variations across
-                  six core operators so diverse phrasings (e.g., "agitate" → <code>&lt;Stir&gt;</code>)
-                  are handled correctly. Fine-tuned from Llama 3.2 1B.
-                </p>
-
-                <!-- System Prompt -->
-                <div class="prompt-block" style="margin-bottom: 1.2rem;">
-                  <div class="prompt-role system-role">SYSTEM</div>
-                  <pre class="prompt-pre"><code>You are a laboratory automation system. Convert the following instruction
-into a procedure description. Output ONLY valid XML inside &lt;procedure&gt; tags.
-
-Strict Rules:
-  • Tags are CASE-SENSITIVE: MUST use &lt;Add&gt;, &lt;Stir&gt;, &lt;HeatChill&gt;,
-    &lt;Transfer&gt;, &lt;CleanVessel&gt;, &lt;Move&gt;.
-  • DO NOT use lowercase tags like &lt;add&gt; or &lt;clean_vessel&gt;.
-  • &lt;Transfer&gt; MUST use attributes: from_vessel, to_vessel, volume.</code></pre>
-                </div>
-
-                <!-- Example -->
-                <p style="font-weight: 600; font-size: 0.85rem; color: #555; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                  Example — Multi-Step Protocol
-                </p>
-                <div class="prompt-block" style="margin-bottom: 0.5rem;">
-                  <div class="prompt-role user-role">USER</div>
-                  <pre class="prompt-pre"><code>Pour 50 mL of water into flask_B. Stir the solution in flask_B for 2 min.
-Pour 25 mL from flask_B into beaker_A. Rinse and clean beaker_A.</code></pre>
-                </div>
-                <div class="prompt-block">
-                  <div class="prompt-role assistant-role">ASSISTANT</div>
-                  <pre class="prompt-pre"><code>&lt;procedure&gt;
-  &lt;Add vessel="flask_B" reagent="water" volume="50 mL" /&gt;
-  &lt;Stir vessel="flask_B" time="2 min" /&gt;
-  &lt;Transfer from_vessel="flask_B" to_vessel="beaker_A" volume="25 mL" /&gt;
-  &lt;CleanVessel vessel="beaker_A" /&gt;
-&lt;/procedure&gt;
-                  </code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-    
 <!-- People -->
 <section class="section hero is-light">
-  <div class="container is-max-widescreen"> 
+  <div class="container is-max-widescreen">
     <div class="columns is-centered">
-      <div class="column is-11"> 
+      <div class="column is-11">
         <h2 class="title is-3 has-text-centered">People</h2>
-        
+
         <div class="columns is-centered is-variable is-8 mt-5 is-mobile-multiline">
-          
+
           <div class="column has-text-centered">
             <div class="person-image-container">
-              <img src="static/images/people/Bohyeong_Pak.png" alt="Bohyeong Pak" 
+              <img src="static/images/people/Seulchan_Lee.jpg" alt="Seulchan Lee"
                    style="width: 100%; max-width: 180px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
             </div>
             <p class="is-size-5 mt-3" style="white-space: nowrap;">
-              <a href="mailto:bhe1004@khu.ac.kr" class="has-text-dark" style="font-weight: 600;">Bohyeong Pak</a>
+              <a href="mailto:lee081847@khu.ac.kr" class="has-text-dark" style="font-weight: 600;">Seulchan Lee</a>
             </p>
             <p class="is-size-6 has-text-grey">Kyung Hee Univ.</p>
           </div>
 
           <div class="column has-text-centered">
             <div class="person-image-container">
-              <img src="static/images/people/Hyunho_Cho.jpg" alt="Hyunho Cho" 
-                   style="width: 100%; max-width: 180px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-            </div>
-            <p class="is-size-5 mt-3" style="white-space: nowrap;">
-              <a href="mailto:chohh7391@khu.ac.kr" class="has-text-dark" style="font-weight: 600;">Hyunho Cho</a>
-            </p>
-            <p class="is-size-6 has-text-grey">Kyung Hee Univ.</p>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="person-image-container">
-              <img src="static/images/people/Sanghyun_Kim.jpg" alt="Sanghyun Kim" 
+              <img src="static/images/people/Sanghyun_Kim.jpg" alt="Sanghyun Kim"
                    style="width: 100%; max-width: 180px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
             </div>
             <p class="is-size-5 mt-3" style="white-space: nowrap;">
@@ -1123,8 +582,8 @@ Pour 25 mL from flask_B into beaker_A. Rinse and clean beaker_A.</code></pre>
             </p>
             <p class="is-size-6 has-text-grey">Kyung Hee Univ.</p>
           </div>
-          
-        </div> 
+
+        </div>
       </div>
     </div>
   </div>
@@ -1134,7 +593,6 @@ Pour 25 mL from flask_B into beaker_A. Rinse and clean beaker_A.</code></pre>
   .person-image-container img:hover {
     transform: translateY(-5px);
   }
-  /* 모바일에서 너무 좁아지면 자동으로 줄바꿈 되도록 설정 */
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-8 {
       display: flex;
@@ -1145,34 +603,26 @@ Pour 25 mL from flask_B into beaker_A. Rinse and clean beaker_A.</code></pre>
 </style>
 
 
-
-
-
-
-<!-- End youtube video -->
-
-
-
-<!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
+<!-- BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-header">
+      <h2 class="title">BibTeX</h2>
+      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+        <i class="fas fa-copy"></i>
+        <span class="copy-text">Copy</span>
+      </button>
     </div>
-</section> -->
-<!--End BibTex citation -->
+    <pre id="bibtex-code"><code>@article{Lee2026MCMPPI,
+  title   = {Manifold-Constrained MPPI: Real-Time Sampling-Based Control Under Hard Constraints},
+  author  = {Lee, Seulchan and Kim, Sanghyun},
+  journal = {International Journal of Control, Automation, and Systems},
+  year    = {2026},
+  note    = {Submitted}
+}</code></pre>
+  </div>
+</section>
+<!-- End BibTex citation -->
 
 
 <footer class="footer">
@@ -1192,22 +642,12 @@ Pour 25 mL from flask_B into beaker_A. Rinse and clean beaker_A.</code></pre>
 </footer>
 
 <!-- Statcounter tracking code -->
-  
+
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+<!-- End of Statcounter Code -->
 
-    <script>
-    function switchLLMTab(event, tabId) {
-      document.querySelectorAll('.llm-tab-content').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.llm-tab-btn').forEach(btn => {
-        btn.style.borderBottomColor = 'transparent';
-        btn.style.color = '#888';
-      });
-      document.getElementById(tabId).style.display = 'block';
-      event.currentTarget.style.borderBottomColor = '#2563eb';
-      event.currentTarget.style.color = '#2563eb';
-    }
-    </script>
-  </body>
-  </html>
+</main>
+
+</body>
+</html>
