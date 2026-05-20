@@ -6,7 +6,7 @@
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="Manifold-Constrained MPPI - Seulchan Lee, Sanghyun Kim">
-  <meta name="description" content="MC-MPPI: a real-time sampling-based control framework that strictly enforces manifold-based equality constraints by combining VAE latent-space planning with KKT projection.">
+  <meta name="description" content="MC-MPPI: a real-time sampling-based control framework that enforces manifold-based equality constraints by combining VAE latent-space planning with a single-step QP execution stage. Validated on a 14-DoF closed-chain dual-arm system in simulation and on real hardware.">
   <meta name="keywords" content="MPPI, sampling-based MPC, model predictive control, equality constraints, constraint manifold, variational autoencoder, dual-arm manipulation, closed-chain manipulation, robotics">
   <meta name="author" content="Seulchan Lee, Sanghyun Kim">
   <meta name="robots" content="index, follow">
@@ -16,9 +16,9 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="RCI Lab, Kyung Hee University">
   <meta property="og:title" content="Manifold-Constrained MPPI: Real-Time Sampling-Based Control Under Hard Constraints">
-  <meta property="og:description" content="MC-MPPI: a real-time sampling-based control framework that strictly enforces manifold-based equality constraints by combining VAE latent-space planning with KKT projection.">
-  <meta property="og:url" content="https://ggorygory.github.io/mcmppi/">
-  <meta property="og:image" content="https://ggorygory.github.io/mcmppi/static/images/teaser.jpg">
+  <meta property="og:description" content="MC-MPPI: a real-time sampling-based control framework that enforces manifold-based equality constraints by combining VAE latent-space planning with a single-step QP execution stage on a 14-DoF closed-chain dual-arm system.">
+  <meta property="og:url" content="https://rcilab.github.io/mcmppi/">
+  <meta property="og:image" content="https://ggorygory.github.io/mcmppi/static/images/teaser.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Manifold-Constrained MPPI - Closed-Chain Dual-Arm Manipulation">
@@ -31,8 +31,8 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Manifold-Constrained MPPI">
-  <meta name="twitter:description" content="MC-MPPI enforces hard manifold-based equality constraints in real time by combining VAE latent-space MPPI with a one-shot KKT projection.">
-  <meta name="twitter:image" content="https://ggorygory.github.io/mcmppi/static/images/teaser.jpg">
+  <meta name="twitter:description" content="MC-MPPI enforces manifold-based equality constraints in real time by combining VAE latent-space MPPI with a single-step QP execution stage. 100&nbsp;Hz on a 14-DoF closed-chain dual-arm system.">
+  <meta name="twitter:image" content="https://rcilab.github.io/mcmppi/static/images/teaser.png">
   <meta name="twitter:image:alt" content="Manifold-Constrained MPPI">
 
   <!-- Academic/Research Specific -->
@@ -123,9 +123,9 @@
       "name": "International Journal of Control, Automation, and Systems"
     },
     "url": "https://ggorygory.github.io/mcmppi/",
-    "image": "https://ggorygory.github.io/mcmppi/static/images/teaser.jpg",
+    "image": "https://ggorygory.github.io/mcmppi/static/images/teaser.png",
     "keywords": ["MPPI", "sampling-based MPC", "equality constraints", "constraint manifold", "variational autoencoder", "dual-arm manipulation"],
-    "abstract": "Sampling-based model predictive control methods such as Model Predictive Path Integral (MPPI) offer derivative-free optimization and robustness in complex robotic systems, but cannot guarantee hard-constraint satisfaction. We propose Manifold-Constrained MPPI (MC-MPPI), a real-time framework that strictly enforces manifold-based equality constraints by decoupling constraint handling into VAE-based latent-space planning and a KKT-based execution-level projection.",
+    "abstract": "Sampling-based model predictive control methods such as Model Predictive Path Integral (MPPI) offer derivative-free optimization and robustness in complex robotic systems, but cannot guarantee hard-constraint satisfaction. We propose Manifold-Constrained MPPI (MC-MPPI), a real-time framework that enforces manifold-based equality constraints by decoupling the constrained optimal control problem into VAE-based latent-space planning and a single-step QP execution-level correction. MC-MPPI operates stably at 100 Hz on a 14-DoF closed-chain dual-arm system and reliably navigates dynamic environments.",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -240,11 +240,11 @@
         <source src="static/videos/teaser.mp4" type="video/mp4">
       </video> -->
 
-      <img src="static/images/teaser.jpg" alt="Closed-chain dual-arm manipulation under manifold-based equality constraints" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px;">
+      <img src="static/images/teaser.png" alt="MC-MPPI success snapshots on the closed-chain dual-arm manipulation task" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px;">
 
       <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; font-size: 0.95rem; line-height: 1.5;">
         <p class="section-intro" style="margin-bottom: 0; color: #4a4a4a;">
-          MC-MPPI is a real-time sampling-based control framework that strictly enforces manifold-based equality constraints, such as the closed-chain kinematic constraints arising in dual-arm manipulation. By decoupling constraint handling into a VAE-learned latent-space planning stage and a KKT-based execution-level projection, MC-MPPI runs at 100&nbsp;Hz while reducing equality-constraint violation by an order of magnitude over baseline MPPI variants.
+          MC-MPPI is a real-time sampling-based control framework that effectively enforces manifold-based equality constraints, such as the closed-chain kinematic constraints arising in dual-arm manipulation. By decoupling the constrained optimal control problem into VAE-learned latent-space planning and a single-step QP execution-level correction, MC-MPPI sustains 100&nbsp;Hz real-time control on a 14-DoF dual-arm system while reducing equality-constraint violation by an order of magnitude over baseline MPPI variants.
         </p>
       </h2>
     </div>
@@ -260,7 +260,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Sampling-based model predictive control methods such as Model Predictive Path Integral (MPPI) offer derivative-free optimization and robustness in complex robotic systems, making them attractive for real-time control. However, standard MPPI relies on cost-based soft penalties that cannot guarantee hard-constraint satisfaction, severely limiting its applicability to constrained tasks such as closed-chain manipulation. To address this, we propose <strong>Manifold-Constrained MPPI (MC-MPPI)</strong>, a real-time sampling-based control framework that handles hard equality constraints while preserving the computational advantages of MPPI. The key idea is to decouple constraint handling into two stages: planning and execution. At the planning level, a Variational Autoencoder (VAE) learns a low-dimensional latent space that captures the structure of the constraint manifold, enabling MPPI to sample candidate trajectories in this latent space and evaluate costs through decoding, without per-sample projection onto the manifold. At the execution level, a KKT-based projection layer enforces constraint satisfaction on the selected trajectory, which is then tracked by an inverse dynamics controller. This decoupled architecture significantly reduces the computational burden of enforcing hard constraints, enabling real-time control of high-dimensional constrained systems. Experiments on multiple constrained robotic systems in both simulation and real-world settings, including closed-chain dual-arm manipulation, demonstrate that MC-MPPI operates at 100&nbsp;Hz while maintaining constraint satisfaction in real time and significantly outperforming baseline methods in tracking accuracy.
+            Sampling-based model predictive control methods, such as Model Predictive Path Integral (MPPI), offer derivative-free optimization and robustness in complex robotic systems. However, standard MPPI relies on cost-based soft penalties that cannot guarantee hard-constraint satisfaction, severely limiting its applicability to highly constrained tasks such as closed-chain manipulation. To address this, we propose <strong>Manifold-Constrained MPPI (MC-MPPI)</strong>, a real-time sampling-based control framework that enforces manifold-based equality constraints while preserving the computational advantages of MPPI. The key idea is to decouple the constrained optimal control problem into latent-space planning and execution-level correction. At the planning stage, a Variational Autoencoder (VAE) learns a low-dimensional latent representation of the constraint manifold, enabling MPPI to efficiently generate candidate trajectories that are structurally near-feasible without requiring per-sample modification. Since this near-feasible reference enables accurate linearization of the equality constraints, an execution-level Quadratic Programming (QP) controller resolves the residual manifold mismatch in a single solve rather than through iterative projection. Experiments on a 14-DoF closed-chain dual-arm system in both simulation and real-world settings demonstrate that MC-MPPI operates stably at 100&nbsp;Hz, reliably navigates dynamic environments while effectively maintaining hard equality constraints, and significantly outperforms baseline methods in tracking accuracy.
           </p>
         </div>
       </div>
@@ -278,15 +278,14 @@
     <div style="text-align: center; margin-bottom: 1rem;">
       <p class="fig-caption" style="font-size: 1rem; line-height: 1.6;">
         <strong>Two-Stage Architecture.</strong>
-        The upper-level planner runs MPPI in a VAE-learned latent space to efficiently generate near-feasible candidate trajectories under manifold-based equality constraints. The decoded optimal solution is then corrected by a KKT-based projection layer to recover strict feasibility, and the resulting reference is tracked by a lower-level HQP-based inverse-dynamics controller.
+        The upper-level planner runs MPPI in a VAE-learned latent space to efficiently generate near-feasible candidate trajectories under manifold-based equality constraints. The decoded nominal solution is then corrected by a single-step QP to effectively satisfy the hard constraints, and the resulting reference is tracked by an optimization-based low-level controller. On the dual-arm system, the slow-frequency planner runs at 100&nbsp;Hz while the fast-frequency executor runs at 500&nbsp;Hz.
       </p>
     </div>
 
-    <!-- TODO: Replace overview.png with the MC-MPPI architecture diagram (e.g., figure/fig3 from the IJCAS paper) -->
     <div style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
-      <img src="static/images/teaser.jpg" alt="MC-MPPI overall architecture" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px; opacity: 0.95;">
+      <img src="static/images/framework.png" alt="MC-MPPI overall architecture" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px;">
       <p class="fig-caption" style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6; color: #4a4a4a;">
-        Real-world closed-chain dual-arm setup considered in this work. The shared object induces hard kinematic equality constraints between the two manipulators.
+        Overall architecture of the MC-MPPI framework: VAE-based latent-space MPPI planner (100&nbsp;Hz) feeds a single-step QP correction stage, whose output is tracked by a 500&nbsp;Hz low-level controller.
       </p>
     </div>
 
@@ -339,18 +338,17 @@
         <div class="method-card is-horizontal">
           <div class="card-content">
             <div class="card-tag">Execution Stage</div>
-            <h4>One-Shot KKT/QP Projection &amp; HQP Tracking</h4>
+            <h4>Single-Step QP for Residual Manifold Mismatch</h4>
           </div>
           <div>
             <p>
               Because &psi;<sub>&theta;</sub> is only an approximation of <em>M</em>, the decoded reference exhibits a
-              residual <em>manifold mismatch</em>. A single-step QP, obtained by linearizing
-              <em>h</em>(<em>q</em>) = 0, projects this reference back onto the manifold while a task-tracking term
-              keeps the projection biased toward the operational-space target. Because the reference is already
-              near-feasible, one QP solve recovers a strictly feasible configuration without iterative refinement,
-              keeping the projection cost negligible. The resulting feasible state is tracked by a Hierarchical
-              Quadratic Programming (HQP)-based inverse-dynamics controller that produces control inputs consistent
-              with the equality constraints of the closed-chain system.
+              residual <em>manifold mismatch</em>. Crucially, the latent-space planning provides a structurally
+              near-feasible reference, which enables the nonlinear equality constraints to be accurately linearized.
+              An execution-level QP controller then explicitly incorporates these equality constraints into a single
+              optimization solve, eliminating residual errors without iterative manifold projection. The resulting
+              physically feasible control command is dispatched to the low-level controller, sustaining stable
+              real-time operation at high control frequency.
             </p>
           </div>
         </div>
@@ -368,21 +366,16 @@
     </div>
 
     <p style="margin-bottom: 1.5rem;">
-      We validate MC-MPPI on a closed-chain dual-arm manipulation task in MuJoCo with two
+      We validate MC-MPPI on a closed-chain dual-arm manipulation task with two
       Panda manipulators jointly grasping a flat tray
-      (<em>q</em> &isin; &#8477;<sup>14</sup>, equality constraint <em>h</em>(<em>q</em>) &isin; &#8477;<sup>8</sup>
-      comprising a 6-D relative-pose closure and a 2-D tray-flatness term, latent dimension <em>m</em>&nbsp;=&nbsp;6).
-      MPPI uses <em>K</em>&nbsp;=&nbsp;200 samples, horizon <em>T</em>&nbsp;=&nbsp;30, and
-      &Delta;<em>t</em>&nbsp;=&nbsp;10&nbsp;ms on an Intel i5-13400F CPU with an NVIDIA RTX 4060 Ti GPU.
+      (<em>q</em>&nbsp;&isin;&nbsp;&#8477;<sup>14</sup>, equality constraint <em>h</em>(<em>q</em>)&nbsp;&isin;&nbsp;&#8477;<sup>8</sup>
+      comprising a 6-D relative-pose closure between the two end-effectors and a 2-D tray-flatness term, latent
+      dimension <em>m</em>&nbsp;=&nbsp;6). MPPI uses <em>K</em>&nbsp;=&nbsp;200 samples, horizon
+      <em>T</em>&nbsp;=&nbsp;30, and &Delta;<em>t</em>&nbsp;=&nbsp;10&nbsp;ms. The hard-constraint and
+      static-obstacle experiments are conducted in MuJoCo, while the dynamic-obstacle experiment is performed
+      on the real dual-arm hardware. All computations run on an Intel Core i5-13400F CPU with an NVIDIA RTX
+      4060 Ti GPU.
     </p>
-
-    <!-- TODO: Replace experiment.png with paper figures (e.g., figure/exp1_snapshots_success, figure/exp1_violation) -->
-    <div style="text-align: center; margin-bottom: 2rem;">
-      <img src="static/images/teaser.jpg" alt="Experiment overview" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px; opacity: 0.95;">
-      <p class="fig-caption" style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6; color: #4a4a4a;">
-        Closed-chain dual-arm manipulation benchmark used throughout the experiments.
-      </p>
-    </div>
 
     <!-- Hard-Constraint Satisfaction -->
     <div class="columns is-centered" style="margin-top: 2.5rem;">
@@ -390,10 +383,16 @@
         <h3 class="title is-4">Validation of Hard-Constraint Satisfaction</h3>
         <p>
           MC-MPPI is compared against <em>Vanilla MPPI</em> (joint-space MPPI with a penalty cost on
-          &Vert;<em>h</em>(<em>q</em>)&Vert;) and <em>Latent MPPI</em> (latent-space MPPI without QP projection).
-          MC-MPPI reduces the closed-chain violation by nearly an order of magnitude over both baselines,
-          and is the only variant that successfully transports the tray to the target without losing the
-          bimanual grasp.
+          &Vert;<em>h</em>(<em>q</em>)&Vert;) and <em>Latent MPPI</em> (an ablation that retains VAE latent-space
+          planning but omits the QP execution stage). MC-MPPI is the only variant that successfully transports
+          the tray to the target while preserving the bimanual grasp, converging at <strong>7.92&nbsp;s</strong>
+          with an average equality-constraint violation of <strong>0.0066&nbsp;&plusmn;&nbsp;0.0007</strong>.
+          Vanilla MPPI fails earliest at <strong>2.97&nbsp;s</strong> with violation peaks reaching 0.082,
+          reflecting the chaotic exploration in the ambient configuration space under soft-penalty handling.
+          Latent MPPI drives the tracking error down smoothly &mdash; evidence that the VAE latent space enables
+          meaningful manifold-aware exploration &mdash; but the residual manifold mismatch accumulates and the
+          bimanual grasp breaks at <strong>3.41&nbsp;s</strong>, isolating the QP execution stage as the missing
+          ingredient that MC-MPPI provides.
         </p>
 
         <div class="table-container" style="margin-top: 1.5rem;">
@@ -401,29 +400,29 @@
             <thead>
               <tr>
                 <th>Method</th>
-                <th>&Vert;<em>h</em>(<em>q</em>)&Vert; (8D)</th>
-                <th>&Vert;<em>h</em><sub>cc</sub>&Vert; (6D)</th>
-                <th>&Vert;<em>h</em><sub>flat</sub>&Vert; (2D)</th>
+                <th>Outcome</th>
+                <th>Average &Vert;<em>h</em>(<em>q</em>)&Vert;</th>
+                <th>Peak &Vert;<em>h</em>(<em>q</em>)&Vert;</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Vanilla MPPI</td>
-                <td>0.0305 &plusmn; 0.0229</td>
-                <td>0.0154 &plusmn; 0.0110</td>
-                <td>0.0263 &plusmn; 0.0202</td>
+                <td>Fails at 2.97&nbsp;s</td>
+                <td>0.0314</td>
+                <td>0.0820</td>
               </tr>
               <tr>
                 <td>Latent MPPI</td>
-                <td>0.0199 &plusmn; 0.0022</td>
-                <td>0.0181 &plusmn; 0.0023</td>
-                <td>0.0079 &plusmn; 0.0027</td>
+                <td>Fails at 3.41&nbsp;s</td>
+                <td>0.0199</td>
+                <td>0.0226</td>
               </tr>
               <tr>
                 <td><strong>MC-MPPI (Ours)</strong></td>
+                <td><strong>Converges at 7.92&nbsp;s</strong></td>
                 <td><strong>0.0066 &plusmn; 0.0007</strong></td>
-                <td><strong>0.0024 &plusmn; 0.0004</strong></td>
-                <td><strong>0.0061 &plusmn; 0.0006</strong></td>
+                <td><strong>&lt; 0.01</strong></td>
               </tr>
             </tbody>
           </table>
@@ -431,17 +430,21 @@
       </div>
     </div>
 
-    <!-- Single-Instance Sampling -->
+    <!-- Static Obstacles + Single-Instance Sampling -->
     <div class="columns is-centered" style="margin-top: 3rem;">
       <div class="column is-full">
-        <h3 class="title is-4">Validation of Single-Instance Sampling</h3>
+        <h3 class="title is-4">Obstacle Avoidance under Static Environments</h3>
         <p>
-          With single-instance sampling, MC-MPPI converges around static obstacles in
-          <strong>7.74&nbsp;s</strong>, compared to <strong>79.4&nbsp;s</strong> for the conventional
-          step-wise variant, while producing notably smoother joint trajectories. The mean computation
-          time per cycle stays well within the 10&nbsp;ms budget; without single-instance sampling, peak
-          latency reaches 16.38&nbsp;ms with a 0.63% deadline-miss rate, whereas the proposed scheme keeps
-          all cycles below the budget.
+          We evaluate the framework's ability to navigate cluttered static environments while maintaining
+          the manifold-based equality constraint, and additionally characterize the role of
+          <em>constant-innovation</em> latent rollouts (single-instance sampling). With this strategy,
+          MC-MPPI rapidly identifies a collision-free path and converges at <strong>7.60&nbsp;s</strong>
+          with an average constraint violation of 0.0069&nbsp;&plusmn;&nbsp;0.0003. Without it, per-step
+          independent noise causes the latent velocity to fluctuate randomly; the nonlinear VAE decoder
+          amplifies these fluctuations into jerky joint motions, leading to prolonged stagnation near the
+          obstacles &mdash; convergence takes <strong>79.25&nbsp;s</strong>. Holding the latent-velocity
+          innovation constant across the horizon sustains directional exploration along the manifold, which
+          proves critical when the feasible set near obstacles is sparse.
         </p>
 
         <div class="table-container" style="margin-top: 1.5rem;">
@@ -449,26 +452,23 @@
             <thead>
               <tr>
                 <th>Variant</th>
-                <th>Mean (ms)</th>
-                <th>Std (ms)</th>
-                <th>Max (ms)</th>
-                <th>&ge; 10&nbsp;ms (%)</th>
+                <th>Convergence Time</th>
+                <th>&Vert;<em>h</em>(<em>q</em>)&Vert;</th>
+                <th>Trajectory Smoothness</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>w. single-instance (Ours)</strong></td>
-                <td><strong>7.17</strong></td>
-                <td><strong>0.94</strong></td>
-                <td><strong>9.49</strong></td>
-                <td><strong>0.00</strong></td>
+                <td><strong>w. constant-innovation (Ours)</strong></td>
+                <td><strong>7.60&nbsp;s</strong></td>
+                <td><strong>0.0069 &plusmn; 0.0003</strong></td>
+                <td><strong>Smooth</strong></td>
               </tr>
               <tr>
-                <td>w/o single-instance</td>
-                <td>7.23</td>
-                <td>1.04</td>
-                <td>16.38</td>
-                <td>0.63</td>
+                <td>w/o constant-innovation</td>
+                <td>79.25&nbsp;s</td>
+                <td>0.0067 &plusmn; 0.0010</td>
+                <td>Jerky (high-frequency oscillation)</td>
               </tr>
             </tbody>
           </table>
@@ -476,75 +476,53 @@
       </div>
     </div>
 
-    <!-- Dynamic Obstacles -->
+    <!-- Dynamic Obstacles on Real Hardware -->
     <div class="columns is-centered" style="margin-top: 3rem;">
       <div class="column is-full">
-        <h3 class="title is-4">Reactiveness Under Dynamic Obstacles</h3>
+        <h3 class="title is-4">Obstacle Avoidance under Dynamic Environments (Real Hardware)</h3>
         <p>
-          Under a single spherical obstacle (radius 5&nbsp;cm) traversing the workspace at 0.1&ndash;0.2&nbsp;m/s
-          along either the <em>x</em>- or <em>y</em>-axis, MC-MPPI achieves a 100% success rate in three of
-          four conditions while keeping the equality-constraint violation in the 0.0062&ndash;0.0070 range,
-          comparable to the static-obstacle case. The only failure mode arises in the
-          <em>x</em>-axis 0.2&nbsp;m/s setting, where the dual-arm workspace itself bounds the available
-          lateral clearance.
+          We deploy MC-MPPI on the <strong>real closed-chain dual-arm hardware</strong> and evaluate
+          reactiveness under time-varying environments. The bimanual system is commanded to transport the
+          tray between uniformly sampled start/goal poses while a single spherical obstacle (radius 5&nbsp;cm)
+          traverses the workspace along either the <em>x</em>- or <em>y</em>-axis at randomly selected speeds
+          of 0.1 or 0.2&nbsp;m/s. Across 40 randomized trials, MC-MPPI achieves a
+          <strong>95% success rate (38/40)</strong> with an average constraint violation of
+          <strong>0.0067&nbsp;&plusmn;&nbsp;0.0010</strong> &mdash; comparable to the static-obstacle scenario.
+          The MPPI planner and the QP execution stage run on separate parallel threads, sustaining
+          <strong>100&nbsp;Hz replanning</strong> and <strong>500&nbsp;Hz reference tracking</strong>. The two
+          failures occur only when the obstacle moves rapidly along the <em>x</em>-axis, where the dual-arm
+          reachable region provides insufficient lateral clearance for evasion.
         </p>
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <img src="static/images/exp3_dynamic.png" alt="Real-hardware dynamic obstacle avoidance snapshots" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto; border-radius: 6px;">
+          <p class="fig-caption" style="margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6; color: #4a4a4a;">
+            Snapshots of MC-MPPI executing a real-time evasion maneuver to bypass a moving obstacle on the real dual-arm hardware while maintaining manifold-based equality constraints.
+          </p>
+        </div>
 
         <div class="table-container" style="margin-top: 1.5rem;">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
             <thead>
               <tr>
-                <th>Obstacle Motion</th>
-                <th>Speed (m/s)</th>
+                <th>Trials</th>
                 <th>Success Rate</th>
                 <th>&Vert;<em>h</em>(<em>q</em>)&Vert;</th>
+                <th>Planning Frequency</th>
+                <th>Execution Frequency</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><em>x</em>-axis</td>
-                <td>0.1</td>
-                <td><strong>100%</strong></td>
-                <td>0.0070 &plusmn; 0.0007</td>
-              </tr>
-              <tr>
-                <td><em>x</em>-axis</td>
-                <td>0.2</td>
-                <td>80%</td>
-                <td>0.0062 &plusmn; 0.0010</td>
-              </tr>
-              <tr>
-                <td><em>y</em>-axis</td>
-                <td>0.1</td>
-                <td><strong>100%</strong></td>
-                <td>0.0065 &plusmn; 0.0008</td>
-              </tr>
-              <tr>
-                <td><em>y</em>-axis</td>
-                <td>0.2</td>
-                <td><strong>100%</strong></td>
-                <td>0.0067 &plusmn; 0.0009</td>
+                <td>38 / 40</td>
+                <td><strong>95%</strong></td>
+                <td><strong>0.0067 &plusmn; 0.0010</strong></td>
+                <td>100&nbsp;Hz</td>
+                <td>500&nbsp;Hz</td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
-    </div>
-
-    <!-- Real-World Deployment -->
-    <div class="columns is-centered" style="margin-top: 3rem;">
-      <div class="column is-full">
-        <h3 class="title is-4">Real-World Deployment</h3>
-        <p>
-          The framework is deployed on a real closed-chain dual-arm system to verify practical
-          applicability under sim-to-real uncertainties such as sensor noise, model mismatch, and
-          unmodeled dynamics. The full hardware experiments and additional ablations are reported in the
-          accompanying IJCAS submission.
-        </p>
-
-        <!-- TODO: Replace placeholder with the real-world experiment video when available -->
-        <!-- <video controls muted loop autoplay style="width: 100%; border-radius: 8px; margin-top: 1.5rem;">
-          <source src="static/videos/real_world.mp4" type="video/mp4">
-        </video> -->
       </div>
     </div>
 
@@ -614,7 +592,7 @@
       </button>
     </div>
     <pre id="bibtex-code"><code>@article{Lee2026MCMPPI,
-  title   = {Manifold-Constrained MPPI: Real-Time Sampling-Based Control Under Hard Constraints},
+  title   = {Manifold-Constrained {MPPI}: Real-Time Sampling-Based Control Under Hard Constraints},
   author  = {Lee, Seulchan and Kim, Sanghyun},
   journal = {International Journal of Control, Automation, and Systems},
   year    = {2026},
