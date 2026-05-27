@@ -124,7 +124,7 @@
     "url": "https://ggorygory.github.io/mcmppi/",
     "image": "https://ggorygory.github.io/mcmppi/static/images/teaser.png",
     "keywords": ["MPPI", "sampling-based MPC", "equality constraints", "constraint manifold", "variational autoencoder", "dual-arm manipulation"],
-    "abstract": "Sampling-based model predictive control methods such as Model Predictive Path Integral (MPPI) offer derivative-free optimization and robustness in complex robotic systems, but cannot guarantee hard-constraint satisfaction. We propose Manifold-Constrained MPPI (MC-MPPI), a real-time framework that enforces manifold-based equality constraints by decoupling the constrained optimal control problem into VAE-based latent-space planning and a single-step QP execution-level correction. MC-MPPI operates stably at 100 Hz on a 14-DoF closed-chain dual-arm system and reliably navigates dynamic environments.",
+    "abstract": "Sampling-based model predictive control methods, such as Model Predictive Path Integral (MPPI), offer derivative-free optimization and robustness in complex robotic systems. However, standard MPPI relies on cost-based soft penalties that cannot guarantee hard-constraint satisfaction, severely limiting its applicability to highly constrained tasks such as closed-chain manipulation. To address this, we propose Manifold-Constrained MPPI (MC-MPPI), a real-time sampling-based control framework that enforces manifold-based equality constraints while preserving the computational advantages of MPPI. The key idea is to decouple the constrained optimal control problem into latent-space planning and execution-level correction. At the planning stage, a Variational Autoencoder (VAE) learns a low-dimensional latent representation of the constraint manifold, enabling MPPI to efficiently generate near-feasible candidate trajectories without per-sample modification. Since this reference enables accurate linearization of the equality constraints, an execution-level Quadratic Programming (QP) controller resolves the residual manifold mismatch in a single solve rather than through iterative projection. Experiments on a 14-DoF closed-chain dual-arm system in both simulation and real-world settings demonstrate that MC-MPPI operates stably at 100 Hz, reliably navigates dynamic environments while effectively maintaining hard equality constraints, and significantly outperforms baseline methods in tracking accuracy.",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -157,6 +157,12 @@
     ]
   }
   </script>
+
+  <!-- MathJax for mathematical notation -->
+  <script>
+  MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']], tags: 'ams' } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
 
@@ -194,9 +200,8 @@
 
               <div class="column has-text-centered">
                 <div class="publication-links">
-                  <!-- TODO: Replace with actual paper PDF when available -->
                   <span class="link-block">
-                    <a href="static/pdfs/MC_MPPI.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://arxiv.org/abs/2605.24813" target="_blank" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
@@ -204,13 +209,12 @@
                     </a>
                   </span>
 
-                  <!-- TODO: Replace with actual GitHub repo URL when available -->
                   <span class="link-block">
-                    <a href="https://github.com/ggorygory/mcmppi" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <a class="external-link button is-normal is-rounded is-dark" style="opacity: 0.6; cursor: not-allowed;" title="Coming Soon">
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
-                      <span>Code</span>
+                      <span>Code (Coming Soon)</span>
                     </a>
                   </span>
 
@@ -319,11 +323,11 @@
           <div>
             <p>
               A Variational Autoencoder is pre-trained on feasible configurations on <em>M</em>, and the resulting
-              decoder &psi;<sub>&theta;</sub> : &#8477;<sup>m</sup> &rarr; &#8477;<sup>n</sup>
+              decoder $\psi_\theta : \mathbb{R}^m \to \mathbb{R}^n$
               acts as a learned, near-feasible parameterization of the constraint manifold.
               MC-MPPI runs MPPI <em>directly in this latent space</em>: it propagates a latent state with
-              <em>z</em><sub>t+1</sub> = <em>z</em><sub>t</sub> + &#x0169;<sub>t</sub>&Delta;t,
-              decodes each rolled-out latent trajectory back to the joint space via &psi;<sub>&theta;</sub>,
+              $z_{t+1} = z_t + \tilde{u}_t\,\Delta t$,
+              decodes each rolled-out latent trajectory back to the joint space via $\psi_\theta$,
               and evaluates costs there.
               A <em>single-instance</em> sampling strategy &mdash; using one trajectory-wise noise vector applied
               uniformly over the prediction horizon &mdash; suppresses chattering of decoded motions and yields
@@ -353,6 +357,7 @@
           </div>
         </div>
       </div>
+      
 
     </div>
   </div>
@@ -394,6 +399,27 @@
           bimanual grasp breaks at <strong>3.41&nbsp;s</strong>, isolating the QP execution stage as the missing
           ingredient that MC-MPPI provides.
         </p>
+
+            <figure class="snapshot-figure" aria-labelledby="hard-constraint-snapshot-caption">
+              <div class="snapshot-panel snapshot-panel-wide">
+                <img src="static/images/fig1_1.png" alt="MC-MPPI hard-constraint validation snapshots at 0, 4, and 8 seconds">
+                <span class="snapshot-label">(a)</span>
+              </div>
+              <div class="snapshot-row">
+                <div class="snapshot-panel">
+                  <img src="static/images/fig1_2.png" alt="Latent MPPI failure snapshot at 3.41 seconds">
+                  <span class="snapshot-label">(b)</span>
+                </div>
+                <div class="snapshot-panel">
+                  <img src="static/images/fig1_3.png" alt="Vanilla MPPI failure snapshot at 2.97 seconds">
+                  <span class="snapshot-label">(c)</span>
+                </div>
+              </div>
+              <figcaption id="hard-constraint-snapshot-caption" class="fig-caption">
+                Snapshots of the hard-constraint validation experiment: (a) MC-MPPI successfully tracks the goal;
+                (b) Latent MPPI fails at 3.41&nbsp;s; (c) Vanilla MPPI fails at 2.97&nbsp;s.
+              </figcaption>
+            </figure>
 
         <div class="table-container" style="margin-top: 1.5rem;">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
@@ -447,6 +473,24 @@
           proves critical when the feasible set near obstacles is sparse.
         </p>
 
+        <figure class="snapshot-figure" aria-labelledby="static-obstacle-snapshot-caption">
+          <div class="snapshot-row static-snapshot-row">
+            <div class="snapshot-panel">
+              <img src="static/images/fig2_1.png" alt="MC-MPPI static obstacle avoidance with constant-innovation sampling">
+              <span class="snapshot-label">(a)</span>
+            </div>
+            <div class="snapshot-panel">
+              <img src="static/images/fig2_2.png" alt="Static obstacle avoidance without constant-innovation sampling">
+              <span class="snapshot-label">(b)</span>
+            </div>
+          </div>
+          <figcaption id="static-obstacle-snapshot-caption" class="fig-caption">
+            Snapshots of obstacle avoidance under static environments: (a) MC-MPPI with
+            constant-innovation sampling efficiently navigates the cluttered environment; (b) per-step sampling
+            exhibits prolonged stagnation.
+          </figcaption>
+        </figure>
+
         <div class="table-container" style="margin-top: 1.5rem;">
           <table class="table is-bordered is-striped is-hoverable is-fullwidth has-text-centered">
             <thead>
@@ -459,13 +503,13 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>w. constant-innovation (Ours)</strong></td>
+                <td><strong>w/ single-instance sampling (Ours)</strong></td>
                 <td><strong>7.60&nbsp;s</strong></td>
                 <td><strong>0.0069 &plusmn; 0.0003</strong></td>
                 <td><strong>Smooth</strong></td>
               </tr>
               <tr>
-                <td>w/o constant-innovation</td>
+                <td>w/o single-instance sampling</td>
                 <td>79.25&nbsp;s</td>
                 <td>0.0067 &plusmn; 0.0010</td>
                 <td>Jerky (high-frequency oscillation)</td>
@@ -526,6 +570,110 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column"><h2 class="title is-3">Appendix</h2></div>
+    </div>
+
+    <div class="content" style="margin-top: 1.5rem;">
+      <h3 class="title is-4">Appendix A. Implementation Details of VAE</h3>
+      <p><strong>- Architecture :</strong> MLP-based $\beta$-VAE with symmetric encoder and decoder networks</p>
+      <p><strong>- Input Dim :</strong> 14</p>
+      <p><strong>- Latent Dim :</strong> 6</p>
+      <p><strong>- MLP Hidden Layers :</strong> [256, 256, 256, 256, 256, 256, 256, 256] for both encoder and decoder</p>
+      <p><strong>- Activation :</strong> GELU</p>
+      <p><strong>- Optimizer :</strong> AdamW</p>
+      <p><strong>- Learning Rate :</strong> 1e-3</p>
+      <p>
+        <strong>- Loss Function :</strong>
+        $$\mathcal{L}_{\text{VAE}} = 5.0\,\|q - \hat{q}\|_1 + \beta(t)\,D_{\text{KL}}\!\left(q_\phi(z\mid q)\;\|\;\mathcal{N}(0,I)\right)$$
+      </p>
+      <p>
+        <strong>- $\beta$ Annealing :</strong>
+        $$\beta(t) = \beta_{\text{start}} + \bigl(\beta_{\text{end}} - \beta_{\text{start}}\bigr)\min\!\left(\tfrac{t}{T_{\text{anneal}}},\,1\right)$$
+      </p>
+      <p><strong>- $\beta_{\text{start}}$ :</strong> 0.001</p>
+      <p><strong>- $\beta_{\text{end}}$ :</strong> 0.02</p>
+      <p><strong>- $T_{\text{anneal}}$ :</strong> $0.5\,T_{\text{train}}$</p>
+
+      <h3 class="title is-4" style="margin-top: 2rem;">Appendix B. Implementation Details of MPPI</h3>
+      <p><strong>- Samples :</strong> 200</p>
+      <p><strong>- Horizon :</strong> 30</p>
+      <p><strong>- Time Step :</strong> 0.01 s</p>
+      <p><strong>- Latent Sampling Std :</strong> 0.001</p>
+      <p><strong>- Temperature $\lambda$ :</strong> 0.005</p>
+
+      <h4 class="title is-5" style="margin-top: 1.5rem;">Cost Function</h4>
+      <p>The per-particle instantaneous cost is</p>
+      $$S = S_{\text{track}} + S_{\text{coll}} + S_{\text{reg}} + S_{\text{limit}} + S_{\text{neutral}}.$$
+      <p>The trajectory cost is obtained by accumulating this per-particle cost over the prediction horizon, with an additional terminal weight on the tracking error.</p>
+
+      <p><strong>Tracking cost.</strong> Let $\mathbf{p}$ and $\mathbf{q}$ denote the tray position and orientation quaternion of particle $k$:</p>
+      $$S_{\text{track}} = w_{\text{track}} \!\left[ w_{\text{pos}} \left\|\mathbf{p} - \mathbf{p}_{\text{des}}\right\|_2^2 + w_{\text{ori}} \!\left(1 - \bigl(\mathbf{q}^{T}\mathbf{q}_{\text{des}}\bigr)^2 \right) \right].$$
+
+      <p><strong>Collision cost.</strong></p>
+      $$S_{\text{coll}} = S_{\text{obs}} + S_{\text{sc}},$$
+      $$S_{\text{obs}} = w_{\text{obs}}\!\left(C_{\text{obs,L}} + C_{\text{obs,R}} + C_{\text{obs,T}}\right),$$
+      <p style="font-size:0.9rem; color:#4a4a4a; margin: -0.5rem 0 0.75rem 0;">
+        where $C_{\text{obs,L}}$, $C_{\text{obs,R}}$, $C_{\text{obs,T}}$ are the obstacle collision costs for the left arm, right arm, and tray, respectively.
+      </p>
+      $$S_{\text{sc}} = w_{\text{sc}}\!\left(C_{\text{LT}} + C_{\text{RT}} + C_{\text{LL}} + C_{\text{RR}}\right).$$
+      <p style="font-size:0.9rem; color:#4a4a4a; margin: -0.5rem 0 0.75rem 0;">
+        where $C_{\text{LT}}$, $C_{\text{RT}}$ are the left/right arm–tray collision costs, and $C_{\text{LL}}$, $C_{\text{RR}}$ are the left/right arm self-collision costs.
+      </p>
+      <p>The sphere-based self-collision cost uses distance $d_{\text{sph}}$:</p>
+      $$C_{\text{sph}} = \begin{cases}
+        10\left(d_{\text{margin}} - d_{\text{sph}}\right)^2,
+          & d_{\text{safe}} \le d_{\text{sph}} < d_{\text{margin}}, \\[6pt]
+        10\left(d_{\text{margin}} - d_{\text{sph}}\right)^2
+          + \dfrac{1}{d_{\text{sph}} - d_{\text{safe}} + \varepsilon},
+          & d_{\text{sph}} < d_{\text{safe}}, \\[10pt]
+        0, & d_{\text{sph}} \ge d_{\text{margin}}.
+      \end{cases}$$
+      <p>The obstacle collision cost uses capsule-to-sphere distance $d_{\text{obs}}$:</p>
+      $$C_{\text{obs}} = \begin{cases}
+        \exp\!\left( 3\,\dfrac{d_{\text{margin}} - d_{\text{obs}}}{d_{\text{margin}} - d_{\text{safe}}} \right) - 1,
+          & d_{\text{obs}} < d_{\text{margin}}, \\[8pt]
+        0, & d_{\text{obs}} \ge d_{\text{margin}}.
+      \end{cases}$$
+
+      <p><strong>Regularization cost.</strong></p>
+      $$S_{\text{reg}} = w_{\text{vel}}\,\rho_{\text{reg}}(|u|), \qquad
+      \rho_{\text{reg}}(a) = 
+        0.01a^2. \\[4pt]
+      $$
+
+      <p><strong>Limit cost.</strong></p>
+      $$S_{\text{limit}} = w_{\text{vel}}\,\rho_{\text{limit}}(|u|), \qquad
+      \rho_{\text{limit}}(a) = \begin{cases}
+        0,                    & a < u_{\max}, \\[4pt]
+        1000(a - u_{\max})^2, & a \ge u_{\max}.
+      \end{cases}$$
+
+      <p><strong>Neutral posture cost.</strong></p>
+      $$S_{\text{neutral}} = w_{\text{neutral}} \left\|\boldsymbol{q}_{\text{joint}} - \boldsymbol{q}_{\text{neutral}}\right\|_2^2.$$
+
+      <h4 class="title is-5" style="margin-top: 1.5rem;">Hyperparameters</h4>
+      <p><strong>- $w_{\text{track}}$ :</strong>
+        $$w_{\text{track}} = \begin{cases} 300 & \|\log(T^{-1}T_{\text{des}})\| > 0.2 \\ 600 & \|\log(T^{-1}T_{\text{des}})\| \leq 0.2 \end{cases}$$
+      </p>
+      <p><strong>- $w_{\text{pos}}$ :</strong> 3.0</p>
+      <p><strong>- $w_{\text{ori}}$ :</strong>
+        $$w_{\text{ori}} = \begin{cases} 2.0 & \|\log(T^{-1}T_{\text{des}})\| > 0.2 \\ 3.0 & \|\log(T^{-1}T_{\text{des}})\| \leq 0.2 \end{cases}$$
+      </p>
+      <p><strong>- $w_{\text{neutral}}$ :</strong> 0.3</p>
+      <p><strong>- $w_{\text{obs}},\, w_{\text{sc}}$ :</strong> 100000.0</p>
+      <p><strong>- $u_{\max}$ :</strong> 0.1</p>
+      <p><strong>- $w_{\text{vel}}$ :</strong> 30.0</p>
+      <p><strong>- $\boldsymbol{q}_{\text{neutral}}$ (each arm, rad) :</strong>
+        $\bigl[0,\,-\tfrac{\pi}{4},\,0,\,-\tfrac{3\pi}{4},\,0,\,\tfrac{\pi}{2},\,\tfrac{\pi}{4}\bigr]^\top$
+      </p>
+    </div>
   </div>
 </section>
 
